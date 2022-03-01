@@ -8,8 +8,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,12 +17,11 @@ import com.gabriel.chanchay.dao.servicio.MovimientoServicio;
 import com.gabriel.chanchay.dto.EstadoDeCuentaMovimientoDto;
 import com.gabriel.chanchay.modelo.Cuenta;
 import com.gabriel.chanchay.modelo.Movimiento;
-import com.gabriel.chanchay.modelo.Persona;
 
 @Service
 public class MovimientoServicioImpl implements MovimientoServicio {
 
-	private static BigDecimal limiteDiario = BigDecimal.valueOf(1000);
+//	private static BigDecimal limiteDiario = BigDecimal.valueOf(1000);
 
 	@Autowired
 	private MovimientoDao movimientoDao;
