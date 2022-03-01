@@ -2,7 +2,7 @@ version: '2'
 
 services:
   app:
-    image: 'caso-practico-docker.jar:latestV1'
+    image: 'caso-practico-docker.jar:latestV2'
     ports:
       - "8080:8080"
     build:
