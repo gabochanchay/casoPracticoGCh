@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.gabriel.chanchay.modelo.Cliente;
 
-public interface ClienteDao extends JpaRepository<Cliente, Integer> {
+public interface ClienteDao extends JpaRepository<Cliente, Long> {
 
 }

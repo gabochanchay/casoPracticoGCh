@@ -2,6 +2,7 @@ package com.gabriel.chanchay.modelo;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-@Entity
+@Entity(name="movimiento")
 public class Movimiento implements Serializable {
 
 	private static final long serialVersionUID = 5620566148447771031L;
@@ -26,6 +27,9 @@ public class Movimiento implements Serializable {
 
 	@Column(name = "valor", columnDefinition = "numeric(12,2)")
 	private BigDecimal valor;
+	
+	@Column(name = "fecha")
+	private Date fecha;
 
 	@Column(name = "saldo", columnDefinition = "numeric(12,2)")
 	private BigDecimal saldo;
@@ -74,4 +78,14 @@ public class Movimiento implements Serializable {
 		this.cuenta = cuenta;
 	}
 
+	public Date getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+
+
+	
 }

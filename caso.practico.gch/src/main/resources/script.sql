@@ -74,13 +74,13 @@ CREATE TABLE IF NOT EXISTS public.movimiento
     saldo numeric(12,2),
     tipo_movimiento character varying(255) COLLATE pg_catalog."default",
     valor numeric(12,2),
-	id_cuenta bigint,
+    id_cuenta bigint,
+    fecha timestamp without time zone,
     CONSTRAINT movimiento_pkey PRIMARY KEY (id),
     CONSTRAINT fk_movimiento_cuenta FOREIGN KEY (id_cuenta)
         REFERENCES public.cuenta (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
-        NOT VALID
 )
 
 TABLESPACE pg_default;
